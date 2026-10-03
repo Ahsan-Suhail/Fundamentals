@@ -51,7 +51,7 @@ const App = () => {
               {copy.map((elem, idx)=>{
                 return <div key={idx} className=" flex flex-col justify-between  text-black font-mono w-38 h-55 lg:w-43 lg:h-55 bg-cover bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUeTw1RQN_LwpuJcq39ft7rofo_ljuW5tNXe3zuDbCyQ&s=10')] rounded-2xl pt-3 pl-4 pr-5 pb-2 wrap-break-word  ">
                   <div>
-                    <h3 className="font-semibold text-sm font-mono leading-5 mb-3 ">{elem.title}</h3>
+                    <h3 className="font-semibold text-xlfont-mono leading-5 mb-3 ">{elem.title}</h3>
                     <p className=" text-sm font-mono text-gray-800">{elem.description}</p>
                   </div>
                   
