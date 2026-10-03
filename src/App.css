@@ -55,7 +55,7 @@ const App = () => {
                     <p className=" text-sm font-mono text-gray-800">{elem.description}</p>
                   </div>
                   
-                  <button key={idx} onClick={()=>{funcdel(idx)}} className="w-full h-6 active:scale-95 active:bg-red-800 bg-red-700 flex items-center justify-center rounded-md font-mono font-semibold text-sm ">Delete</button>
+                  <button key={idx} onClick={()=>{funcdel(idx)}} className="w-full h-6 max-[680px]:mb-2 active:scale-95 active:bg-red-800 bg-red-700 flex items-center justify-center rounded-md font-mono font-semibold text-sm ">Delete</button>
                 </div>
               })}
               
