@@ -49,14 +49,14 @@ const App = () => {
           <div className=" flex gap-4 mt-7 flex-wrap  pl-5">
 
               {copy.map((elem, idx)=>{
-                return <div key={idx} className="  flex flex-col justify-between overflow-hidden  text-black font-mono w-38 h-55 lg:w-43 lg:h-55 bg-cover bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUeTw1RQN_LwpuJcq39ft7rofo_ljuW5tNXe3zuDbCyQ&s=10')] rounded-2xl pt-3 pl-4 pr-5 pb-2 wrap-break-word  ">
-                  <div>
-                    <h3 className="font-semibold text-xl font-mono leading-5 mb-3 ">{elem.title}</h3>
-                    <p className=" text-sm font-mono tracking- text-gray-800 max-h-36 overflow-y-auto scrollbar-thin scrollbar-thumb-black/30 scrollbar-track-transparent">{elem.description}</p>
+                return <div key={idx} className="  flex flex-col justify-between text-black font-mono p-2 w-38 h-55 lg:w-43 lg:h-55 bg-cover  bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUeTw1RQN_LwpuJcq39ft7rofo_ljuW5tNXe3zuDbCyQ&s=10')] rounded-2xl pt-3 pl-4 pr-5 pb-2 wrap-break-word  ">
+                  <div className="flex-1 overflow-auto scrollbar-thin scrollbar-thumb-black/30 scrollbar-track-transparent">
+                    <h3 className="font-semibold text-xl font-mono leading-5 mb-3  ">{elem.title}</h3>
+                    <p className=" text-sm font-mono tracking- text-gray-800 max-h-36 ">{elem.description}</p>
                     
                   </div>
 
-                  <button onClick={() => funcdel(idx)}className="w-full  h-6 active:scale-95 active:bg-red-800 bg-red-700 flex items-center justify-center rounded-md  font-mono font-semibold text-sm">Delete</button>
+                  <button onClick={() => funcdel(idx)}className="w-full mb-2 h-6 active:scale-95 active:bg-red-800 bg-red-700 flex items-center justify-center rounded-md  font-mono font-semibold text-sm">Delete</button>
                 
                 </div>
               })}
