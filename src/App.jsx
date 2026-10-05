@@ -28,7 +28,7 @@ const App = () => {
   }
 
   return (
-    <div className="lg:flex  gap-3 w-full h-screen  bg-black text-white overflow-auto" >
+    <div className="lg:flex  gap-3 w-full h-screen items-stretch bg-black text-white overflow-auto" >
 
       <form onSubmit={(e)=>{
         submithandle(e)
@@ -44,18 +44,20 @@ const App = () => {
 
       <div className="border-l-0 border-t lg:border-l lg:border-t-0  lg:w-1/2 p-4 overflow-y-scroll ">
 
-          <h1 className="font-mono font-semibold text-2xl bg-gray-600/40 p-2 ml-6 rounded-2xl w-32 flex justify-center">My Notes</h1>
+          <h1 className="font-mono font-semibold text-sm lg:text-2xl bg-gray-600/40 p-2 ml-6 rounded-2xl w-25 lg:w-32 flex justify-center">My Notes</h1>
 
-          <div className=" flex gap-5 mt-7 flex-wrap  pl-5">
+          <div className=" flex gap-4 mt-7 flex-wrap  pl-5">
 
               {copy.map((elem, idx)=>{
-                return <div key={idx} className=" flex flex-col justify-between  text-black font-mono w-43 h-55 bg-cover bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUeTw1RQN_LwpuJcq39ft7rofo_ljuW5tNXe3zuDbCyQ&s=10')] rounded-2xl pt-3 pl-4 pr-5 pb-2 wrap-break-word  ">
+                return <div key={idx} className="  flex flex-col justify-between overflow-hidden  text-black font-mono w-38 h-55 lg:w-43 lg:h-55 bg-cover bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUeTw1RQN_LwpuJcq39ft7rofo_ljuW5tNXe3zuDbCyQ&s=10')] rounded-2xl pt-3 pl-4 pr-5 pb-2 wrap-break-word  ">
                   <div>
-                    <h3 className="font-semibold text-xl leading-5 mb-3">{elem.title}</h3>
-                    <p className="font-mono text-gray-800">{elem.description}</p>
+                    <h3 className="font-semibold text-xl font-mono leading-5 mb-3 ">{elem.title}</h3>
+                    <p className=" text-sm font-mono tracking- text-gray-800 max-h-36 overflow-y-auto scrollbar-thin scrollbar-thumb-black/30 scrollbar-track-transparent">{elem.description}</p>
+                    
                   </div>
-                  
-                  <button key={idx} onClick={()=>{funcdel(idx)}} className="w-full h-6 active:scale-95 active:bg-red-800 bg-red-700 flex items-center justify-center rounded-md font-mono font-semibold text-sm ">Delete</button>
+
+                  <button onClick={() => funcdel(idx)}className="w-full  h-6 active:scale-95 active:bg-red-800 bg-red-700 flex items-center justify-center rounded-md  font-mono font-semibold text-sm">Delete</button>
+                
                 </div>
               })}
               
